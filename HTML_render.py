@@ -95,11 +95,11 @@ class HTML():
                                                     label='device_output')
             self.model_option = gr.Dropdown(choices=['tiny.en', 'base.en', 'small.en', 'medium.en', 'large.en'],
                                             label='model_size', interactive=True)
-            # self.speak_rate_slider = gr.Slider(
-            #     0.2, 3.0, value=1.0, step=0.2, label="SpeakRate")
+            self.speak_rate_slider = gr.Slider(
+                0.2, 3.0, value=1.0, step=0.2, label="SpeakRate")
 
-            # self.model_wait_slider = gr.Slider(
-            #     0.1, 3.0, value=0.5, step=0.1, label="model_wait")
+            self.model_wait_slider = gr.Slider(
+                0.1, 3.0, value=0.5, step=0.1, label="model_wait")
             
             self.need_detect_word_input = gr.Textbox(
                 placeholder="Unwanted_Word")
@@ -111,11 +111,11 @@ class HTML():
                 fn=self.device_output_change, inputs=self.device_output_option)
             self.model_option.change(
                 fn=self.model_size_change, inputs=self.model_option)
-            # self.speak_rate_slider.change(
-            #     fn=self.RateChange, inputs=self.speak_rate_slider)
+            self.speak_rate_slider.change(
+                fn=self.RateChange, inputs=self.speak_rate_slider)
             
-            # self.model_wait_slider.change(
-            #     fn=self.ModelWaitChange, inputs=self.model_wait_slider)
+            self.model_wait_slider.change(
+                fn=self.ModelWaitChange, inputs=self.model_wait_slider)
 
             with gr.Row():
                 self.add_button = gr.Button(value="Add", variant="primary")

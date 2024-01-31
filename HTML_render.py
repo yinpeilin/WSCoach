@@ -13,7 +13,6 @@ import asyncio
 from gradio.themes.base import Base
 from gradio.themes.utils import colors, fonts, sizes
 
-
 class Seafoam(Base):
     def __init__(
         self,

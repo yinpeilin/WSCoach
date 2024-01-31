@@ -11,8 +11,6 @@ import time
 # engine.save_to_file(
 #     'i am Hello World, i am a programmer. i think life is short.', 'test1.wav')
 # engine.runAndWait()
-
-
 class TTS():
     def __init__(self):
         self.engine = pyttsx4.init()

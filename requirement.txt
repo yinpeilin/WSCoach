@@ -1,5 +1,5 @@
 torch
-streamlit
 whisper
 pyttsx4
 faster_whisper
+gradio
